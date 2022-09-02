@@ -1,0 +1,2 @@
+jar cfe classfinder.jar nl.dijkrosoft.snippets.util.ClassFinder -C bin nl/dijkrosoft/snippets/util/ClassFinder.class -C bin nl/dijkrosoft/snippets/util/ClassFinder\$1.class 
+# innerclass not included somehow: "C:\Program Files\Java\jdk1.8.0_301\bin\jar" cfe classfinder.jar nl.dijkrosoft.snippets.util.ClassFinder -C bin nl/dijkrosoft/snippets/util/ClassFinder.class -C bin nl/dijkrosoft/snippets/util/ClassFinder\$1.class
