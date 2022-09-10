@@ -16,6 +16,7 @@ public class ClassFinder {
 
 		if (args == null || args.length < 2) {
 			System.out.println("Usage: java -jar classfinder.jar <dir> <class-name>");
+			System.out.println("Example:	 find_class.sh . javax/servlet/http/HttpServletRequest");
 			return;
 		}
 
@@ -44,20 +45,18 @@ public class ClassFinder {
 			jarFile = new JarFile(file.toFile(), false, ZipFile.OPEN_READ);
 			List<JarEntry> hits = jarFile.stream().filter(e -> !e.isDirectory() && e.getName().indexOf(classname) != -1)
 					.collect(Collectors.toList());
-			
-			if ( hits.size()> 0) {
+
+			if (hits.size() > 0) {
 				// only print JAR name if it's a hit ( i.e. contains the searched class)
 				System.out.println("\nJAR file " + file);
 			}
-            hits.forEach(System.out::println);
+			hits.forEach(System.out::println);
 
 		} finally {
 			if (jarFile != null) {
 				jarFile.close();
 			}
 		}
-		
-		
 
 	}
 }
