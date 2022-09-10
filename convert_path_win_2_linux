@@ -1,0 +1,13 @@
+if [[ -z "$1" ]]; then
+    echo "Give path of JAR as first param"; 
+    echo "Param should be quoted, like 'a/b/c'"
+    exit
+fi
+
+unix_path=$(echo $1 | tr '\\' '/')
+
+echo "Result is $unix_path" 
+
+#cp $unix_path /c/Users/dijkdick/WORKSPACE/tc~sec~ume~logon~logic_api.jar.src/lib
+
+
